@@ -27,6 +27,8 @@ func (d *Dispatcher) Run()  {
 }
 
 func (d *Dispatcher) dispatch()  {
+	fmt.Println("len JobQueue ------------", len(JobQueue))
+	
 	for{
 		select{
 		case job:= <-JobQueue:
